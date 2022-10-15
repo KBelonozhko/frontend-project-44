@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import startGame from '../src/games-even.js';
+import startGame from '../games/game-even.js';
 
-console.log('Welcome to the Brain Games!');
 startGame();
