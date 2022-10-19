@@ -1,24 +1,25 @@
 import controlsGame from '../src/index.js';
 
+const isPrime = (number) => {
+  if (number === 1) {
+    return false;
+  }
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const startPrimeRound = () => {
+  const randomNumber = Math.round(Math.random() * 100);
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  return [randomNumber, correctAnswer];
+};
+
 const startGame = () => {
   const gamePrimeRules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const startPrimeRound = () => {
-    const randomNumber = Math.round(Math.random() * 100);
-    const checkCorrectAnswer = () => {
-      if (randomNumber === 1) {
-        return 'no';
-      } if (randomNumber === 2) {
-        return 'yes';
-      }
-      for (let i = 2; i < randomNumber; i += 1) {
-        if (randomNumber % i === 0) {
-          return 'no';
-        }
-      }
-      return 'yes';
-    };
-    return [randomNumber, checkCorrectAnswer()];
-  };
   controlsGame(gamePrimeRules, startPrimeRound);
 };
 
