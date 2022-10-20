@@ -1,8 +1,9 @@
 import controlsGame from '../index.js';
+import getRandomNumber from '../helper-function.js';
 
 const startGcdRound = () => {
-  let randomNumber1 = Math.round(Math.random() * 100);
-  let randomNumber2 = Math.round(Math.random() * 100);
+  let randomNumber1 = getRandomNumber(0, 100);
+  let randomNumber2 = getRandomNumber(0, 100);
   const givenNumbers = `${randomNumber1} ${randomNumber2}`;
   const findsGcd = () => {
     while (randomNumber1 !== randomNumber2) {

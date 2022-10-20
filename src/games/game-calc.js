@@ -1,10 +1,11 @@
 import controlsGame from '../index.js';
+import getRandomNumber from '../helper-function.js';
 
 const startCalcRound = () => {
-  const randomNumber1 = Math.round(Math.random() * 100);
-  const randomNumber2 = Math.round(Math.random() * 100);
+  const randomNumber1 = getRandomNumber(0, 100);
+  const randomNumber2 = getRandomNumber(0, 100);
   const operators = ['+', '-', '*'];
-  const operatorIndex = Math.floor(Math.random() * operators.length);
+  const operatorIndex = getRandomNumber(0, operators.length);
   const randomOperator = operators[operatorIndex];
   const randomCalc = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   const getCalcResult = () => {

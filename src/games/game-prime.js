@@ -1,4 +1,5 @@
 import controlsGame from '../index.js';
+import getRandomNumber from '../helper-function.js';
 
 const isPrime = (number) => {
   if (number === 1) {
@@ -13,7 +14,7 @@ const isPrime = (number) => {
 };
 
 const startPrimeRound = () => {
-  const randomNumber = Math.round(Math.random() * 100);
+  const randomNumber = getRandomNumber(0, 100);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, correctAnswer];
 };
