@@ -30,15 +30,15 @@
 
 - To install you will need to enter:\
 `git clone https://github.com/KBelonozhko/frontend-project-44.git`\
-`npm ci`\
+`make install`\
 `npm link`
 
 - To play the game, run one of the commands:\
-`brain-even`\
-`brain-calc`\
-`brain-gcd`\
-`brain-progression`\
-`brain-prime`
+`make brain-even`\
+`make brain-calc`\
+`make brain-gcd`\
+`make brain-progression`\
+`make brain-prime`
 
 ---
 
