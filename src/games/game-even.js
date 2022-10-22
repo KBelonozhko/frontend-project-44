@@ -10,8 +10,8 @@ const startEvenRound = () => {
 };
 
 const startGame = () => {
-  const gameEvenRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  controlGame(gameEvenRules, startEvenRound);
+  const gameEvenRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  controlGame(gameEvenRule, startEvenRound);
 };
 
 export default startGame;

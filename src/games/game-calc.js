@@ -26,8 +26,8 @@ const startCalcRound = () => {
 };
 
 const startGame = () => {
-  const gameCalcRules = 'What is the result of the expression?';
-  controlGame(gameCalcRules, startCalcRound);
+  const gameCalcRule = 'What is the result of the expression?';
+  controlGame(gameCalcRule, startCalcRound);
 };
 
 export default startGame;

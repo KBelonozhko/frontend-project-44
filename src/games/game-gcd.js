@@ -23,8 +23,8 @@ const startGcdRound = () => {
 };
 
 const startGame = () => {
-  const gameGcdRules = 'Find the greatest common divisor of given numbers.';
-  controlGame(gameGcdRules, startGcdRound);
+  const gameGcdRule = 'Find the greatest common divisor of given numbers.';
+  controlGame(gameGcdRule, startGcdRound);
 };
 
 export default startGame;

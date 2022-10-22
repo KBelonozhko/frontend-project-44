@@ -20,8 +20,8 @@ const startPrimeRound = () => {
 };
 
 const startGame = () => {
-  const gamePrimeRules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  controlGame(gamePrimeRules, startPrimeRound);
+  const gamePrimeRule = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+  controlGame(gamePrimeRule, startPrimeRound);
 };
 
 export default startGame;

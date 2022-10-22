@@ -21,8 +21,8 @@ const startProgressionRound = () => {
 };
 
 const startGame = () => {
-  const gameProgressionRules = 'What number is missing in the progression?';
-  controlGame(gameProgressionRules, startProgressionRound);
+  const gameProgressionRule = 'What number is missing in the progression?';
+  controlGame(gameProgressionRule, startProgressionRound);
 };
 
 export default startGame;
