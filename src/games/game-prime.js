@@ -1,4 +1,4 @@
-import controlsGame from '../index.js';
+import controlGame from '../index.js';
 import getRandomNumber from '../helper-function.js';
 
 const isPrime = (number) => {
@@ -21,7 +21,7 @@ const startPrimeRound = () => {
 
 const startGame = () => {
   const gamePrimeRules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  controlsGame(gamePrimeRules, startPrimeRound);
+  controlGame(gamePrimeRules, startPrimeRound);
 };
 
 export default startGame;

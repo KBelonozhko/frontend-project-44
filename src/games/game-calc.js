@@ -1,4 +1,4 @@
-import controlsGame from '../index.js';
+import controlGame from '../index.js';
 import getRandomNumber from '../helper-function.js';
 
 const getCalcResult = (number1, number2, operator) => {
@@ -27,7 +27,7 @@ const startCalcRound = () => {
 
 const startGame = () => {
   const gameCalcRules = 'What is the result of the expression?';
-  controlsGame(gameCalcRules, startCalcRound);
+  controlGame(gameCalcRules, startCalcRound);
 };
 
 export default startGame;

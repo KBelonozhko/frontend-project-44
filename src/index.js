@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import meetPlayer from './cli.js';
 
-const controlsGame = (rules, startGameRound) => {
+const controlGame = (rules, startGameRound) => {
   console.log('Welcome to the Brain Games!');
   const playerName = meetPlayer();
   console.log(rules);
@@ -19,4 +19,4 @@ const controlsGame = (rules, startGameRound) => {
   console.log(`Congratulations, ${playerName}!`);
 };
 
-export default controlsGame;
+export default controlGame;
