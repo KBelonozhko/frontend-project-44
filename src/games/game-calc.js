@@ -1,6 +1,19 @@
 import controlsGame from '../index.js';
 import getRandomNumber from '../helper-function.js';
 
+const getCalcResult = (number1, number2, operator) => {
+  switch (operator) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      throw Error;
+  }
+};
+
 const startCalcRound = () => {
   const randomNumber1 = getRandomNumber(0, 100);
   const randomNumber2 = getRandomNumber(0, 100);
@@ -8,19 +21,8 @@ const startCalcRound = () => {
   const operatorIndex = getRandomNumber(0, operators.length - 1);
   const randomOperator = operators[operatorIndex];
   const randomCalc = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-  const getCalcResult = () => {
-    switch (randomOperator) {
-      case '+':
-        return randomNumber1 + randomNumber2;
-      case '-':
-        return randomNumber1 - randomNumber2;
-      case '*':
-        return randomNumber1 * randomNumber2;
-      default:
-        return null;
-    }
-  };
-  return [randomCalc, `${getCalcResult()}`];
+  const correctAnswer = getCalcResult(randomNumber1, randomNumber2, randomOperator);
+  return [randomCalc, `${correctAnswer}`];
 };
 
 const startGame = () => {
