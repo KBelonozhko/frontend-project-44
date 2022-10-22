@@ -5,7 +5,7 @@ const startCalcRound = () => {
   const randomNumber1 = getRandomNumber(0, 100);
   const randomNumber2 = getRandomNumber(0, 100);
   const operators = ['+', '-', '*'];
-  const operatorIndex = getRandomNumber(0, operators.length);
+  const operatorIndex = getRandomNumber(0, operators.length - 1);
   const randomOperator = operators[operatorIndex];
   const randomCalc = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   const getCalcResult = () => {
