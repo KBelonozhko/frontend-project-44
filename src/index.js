@@ -5,7 +5,8 @@ const controlGame = (rule, startGameRound) => {
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
   console.log(rule);
-  for (let i = 0; i < 3; i += 1) {
+  const roundCount = 3;
+  for (let i = 0; i < roundCount; i += 1) {
     const [question, correctAnswer] = startGameRound();
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
