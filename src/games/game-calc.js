@@ -1,6 +1,9 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const minLimit = 0;
+const maxLimit = 100;
+
 const getCalcResult = (number1, number2, operator) => {
   switch (operator) {
     case '+':
@@ -15,10 +18,10 @@ const getCalcResult = (number1, number2, operator) => {
 };
 
 const startCalcRound = () => {
-  const randomNumber1 = getRandomNumber(0, 100);
-  const randomNumber2 = getRandomNumber(0, 100);
+  const randomNumber1 = getRandomNumber(minLimit, maxLimit);
+  const randomNumber2 = getRandomNumber(minLimit, maxLimit);
   const operators = ['+', '-', '*'];
-  const operatorIndex = getRandomNumber(0, operators.length - 1);
+  const operatorIndex = getRandomNumber(minLimit, operators.length - 1);
   const randomOperator = operators[operatorIndex];
   const randomCalc = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   const correctAnswer = getCalcResult(randomNumber1, randomNumber2, randomOperator);

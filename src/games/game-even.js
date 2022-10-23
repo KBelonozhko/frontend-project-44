@@ -1,10 +1,13 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const minLimit = 0;
+const maxLimit = 100;
+
 const isEven = (number) => number % 2 === 0;
 
 const startEvenRound = () => {
-  const randomNumber = getRandomNumber(0, 100);
+  const randomNumber = getRandomNumber(minLimit, maxLimit);
   const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
   return [randomNumber, correctAnswer];
 };

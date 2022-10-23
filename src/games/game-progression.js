@@ -1,6 +1,9 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const minLimit = 0;
+const maxLimit = 100;
+
 const getProgression = (array, arrayLength, arrayStep) => {
   for (let i = 0; array.length < arrayLength; i += 1) {
     array.push(array[i] + arrayStep);
@@ -9,12 +12,12 @@ const getProgression = (array, arrayLength, arrayStep) => {
 };
 
 const startProgressionRound = () => {
-  const initialElement = getRandomNumber(0, 100);
-  const progressionStep = getRandomNumber(0, 10);
-  const progression = [initialElement];
   const progressionLength = 10;
+  const initialElement = getRandomNumber(minLimit, maxLimit);
+  const progressionStep = getRandomNumber(minLimit, progressionLength);
+  const progression = [initialElement];
   const resultingProgression = getProgression(progression, progressionLength, progressionStep);
-  const hiddenPosition = getRandomNumber(0, 10);
+  const hiddenPosition = getRandomNumber(minLimit, progressionLength);
   const hiddenElement = resultingProgression[hiddenPosition];
   resultingProgression[hiddenPosition] = '..';
   return [resultingProgression.join(' '), `${hiddenElement}`];

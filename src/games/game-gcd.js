@@ -1,6 +1,9 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const minLimit = 0;
+const maxLimit = 100;
+
 const findsGcd = (number1, number2) => {
   let num1 = number1;
   let num2 = number2;
@@ -15,8 +18,8 @@ const findsGcd = (number1, number2) => {
 };
 
 const startGcdRound = () => {
-  const randomNumber1 = getRandomNumber(0, 100);
-  const randomNumber2 = getRandomNumber(0, 100);
+  const randomNumber1 = getRandomNumber(minLimit, maxLimit);
+  const randomNumber2 = getRandomNumber(minLimit, maxLimit);
   const givenNumbers = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = findsGcd(randomNumber1, randomNumber2);
   return [givenNumbers, `${correctAnswer}`];
