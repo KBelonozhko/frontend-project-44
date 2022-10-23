@@ -6,16 +6,13 @@ const minLimit = 0;
 const maxLimit = 100;
 
 const findsGcd = (number1, number2) => {
-  let num1 = number1;
-  let num2 = number2;
-  while (num1 !== num2) {
-    if (num1 > num2) {
-      num1 -= num2;
-    } else {
-      num2 -= num1;
-    }
+  if (number1 === number2) {
+    return number1;
   }
-  return num1;
+  if (number1 > number2) {
+    return findsGcd(number1 - number2, number2);
+  }
+  return findsGcd(number1, number2 - number1);
 };
 
 const startGcdRound = () => {
