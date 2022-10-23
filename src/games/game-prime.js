@@ -1,6 +1,7 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const gamePrimeRule = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 const minLimit = 0;
 const maxLimit = 100;
 
@@ -23,7 +24,6 @@ const startPrimeRound = () => {
 };
 
 const startGame = () => {
-  const gamePrimeRule = 'Answer "yes" if given number is prime. Otherwise answer "no"';
   controlGame(gamePrimeRule, startPrimeRound);
 };
 

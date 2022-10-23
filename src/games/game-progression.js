@@ -1,8 +1,10 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const gameProgressionRule = 'What number is missing in the progression?';
 const minLimit = 0;
 const maxLimit = 100;
+const progressionLength = 10;
 
 const getProgression = (array, arrayLength, arrayStep) => {
   for (let i = 0; array.length < arrayLength; i += 1) {
@@ -12,7 +14,6 @@ const getProgression = (array, arrayLength, arrayStep) => {
 };
 
 const startProgressionRound = () => {
-  const progressionLength = 10;
   const initialElement = getRandomNumber(minLimit, maxLimit);
   const progressionStep = getRandomNumber(minLimit, progressionLength);
   const progression = [initialElement];
@@ -24,7 +25,6 @@ const startProgressionRound = () => {
 };
 
 const startGame = () => {
-  const gameProgressionRule = 'What number is missing in the progression?';
   controlGame(gameProgressionRule, startProgressionRound);
 };
 

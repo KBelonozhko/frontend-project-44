@@ -1,6 +1,7 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const gameEvenRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const minLimit = 0;
 const maxLimit = 100;
 
@@ -13,7 +14,6 @@ const startEvenRound = () => {
 };
 
 const startGame = () => {
-  const gameEvenRule = 'Answer "yes" if the number is even, otherwise answer "no".';
   controlGame(gameEvenRule, startEvenRound);
 };
 

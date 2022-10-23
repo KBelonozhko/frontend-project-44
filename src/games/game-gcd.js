@@ -1,6 +1,7 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const gameGcdRule = 'Find the greatest common divisor of given numbers.';
 const minLimit = 0;
 const maxLimit = 100;
 
@@ -26,7 +27,6 @@ const startGcdRound = () => {
 };
 
 const startGame = () => {
-  const gameGcdRule = 'Find the greatest common divisor of given numbers.';
   controlGame(gameGcdRule, startGcdRound);
 };
 

@@ -1,8 +1,10 @@
 import controlGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
+const gameCalcRule = 'What is the result of the expression?';
 const minLimit = 0;
 const maxLimit = 100;
+const operators = ['+', '-', '*'];
 
 const getCalcResult = (number1, number2, operator) => {
   switch (operator) {
@@ -20,7 +22,6 @@ const getCalcResult = (number1, number2, operator) => {
 const startCalcRound = () => {
   const randomNumber1 = getRandomNumber(minLimit, maxLimit);
   const randomNumber2 = getRandomNumber(minLimit, maxLimit);
-  const operators = ['+', '-', '*'];
   const operatorIndex = getRandomNumber(minLimit, operators.length - 1);
   const randomOperator = operators[operatorIndex];
   const randomCalc = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
@@ -29,7 +30,6 @@ const startCalcRound = () => {
 };
 
 const startGame = () => {
-  const gameCalcRule = 'What is the result of the expression?';
   controlGame(gameCalcRule, startCalcRound);
 };
 
