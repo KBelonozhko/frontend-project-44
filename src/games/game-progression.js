@@ -7,8 +7,8 @@ const maxLimit = 100;
 const progressionLength = 10;
 
 const getProgression = (array, arrayLength, arrayStep) => {
-  for (let i = 0; array.length < arrayLength; i += 1) {
-    array.push(array[i] + arrayStep);
+  while (array.length !== arrayLength) {
+    array.push(array[array.length - 1] + arrayStep);
   }
   return array;
 };
