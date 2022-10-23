@@ -1,4 +1,4 @@
-import controlGame from '../index.js';
+import operateGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const gameProgressionRule = 'What number is missing in the progression?';
@@ -25,7 +25,7 @@ const startProgressionRound = () => {
 };
 
 const startGame = () => {
-  controlGame(gameProgressionRule, startProgressionRound);
+  operateGame(gameProgressionRule, startProgressionRound);
 };
 
 export default startGame;

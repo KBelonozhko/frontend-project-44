@@ -1,4 +1,4 @@
-import controlGame from '../index.js';
+import operateGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const gameEvenRule = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -14,7 +14,7 @@ const startEvenRound = () => {
 };
 
 const startGame = () => {
-  controlGame(gameEvenRule, startEvenRound);
+  operateGame(gameEvenRule, startEvenRound);
 };
 
 export default startGame;

@@ -1,4 +1,4 @@
-import controlGame from '../index.js';
+import operateGame from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const gameCalcRule = 'What is the result of the expression?';
@@ -30,7 +30,7 @@ const startCalcRound = () => {
 };
 
 const startGame = () => {
-  controlGame(gameCalcRule, startCalcRound);
+  operateGame(gameCalcRule, startCalcRound);
 };
 
 export default startGame;
