@@ -13,7 +13,7 @@ const getCalcResult = (number1, number2, operator) => {
     case '*':
       return number1 * number2;
     default:
-      throw Error;
+      throw new Error('Wrong operator');
   }
 };
 
