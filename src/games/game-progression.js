@@ -1,5 +1,5 @@
 import controlGame from '../index.js';
-import getRandomNumber from '../helper-function.js';
+import getRandomNumber from '../helpers.js';
 
 const getProgression = (array, arrayLength, arrayStep) => {
   for (let i = 0; array.length < arrayLength; i += 1) {

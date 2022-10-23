@@ -1,5 +1,5 @@
 import controlGame from '../index.js';
-import getRandomNumber from '../helper-function.js';
+import getRandomNumber from '../helpers.js';
 
 const isEven = (number) => number % 2 === 0;
 

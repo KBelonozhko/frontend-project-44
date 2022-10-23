@@ -1,5 +1,5 @@
 import controlGame from '../index.js';
-import getRandomNumber from '../helper-function.js';
+import getRandomNumber from '../helpers.js';
 
 const getCalcResult = (number1, number2, operator) => {
   switch (operator) {
